@@ -1,0 +1,81 @@
+@import url("buttons.css");
+
+body {
+  background-color: #5f91ec;
+}
+
+/* ta bort? */
+.progress {
+  background-color: #5f91ec;
+  color: black;
+  margin-left: 80%;
+}
+
+.options {
+  text-align: center;
+}
+
+.test {
+  position: absolute absolute;
+  margin: auto;
+  margin-top: -3%;
+  width: 1000px;
+  height: 200px;
+  background-color: white;
+  border-radius: 1%;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  color: white;
+
+  line-height:2;
+  text-align: center;
+  /* text-align: justify; */
+
+  background: #cc98e6;
+  float: left;
+}
+
+.senderInfo {
+    color: #b3b3b3;
+    margin: auto;
+    padding: 10px;
+}
+
+.name {
+  color: black;
+  margin-left: 1%;
+}
+
+.time {
+  float: right;
+  margin-left: 80%;
+}
+
+/* far goras en for varje mejl: .mailContent1, mailContent2 osv.. */
+.mailContent {
+  /* padding: 100px; */
+  color: black;
+  float:left;
+  margin-left: 1.5%;
+  display: block;
+
+  position: absolute absolute;
+  width: 970px;
+  height: 100px;
+  background-color: #f2f2f2;
+  /* border-radius: 1%; */
+
+}
+
+.ref {
+  color: #b3b3b3;
+}
+.refContent {
+  margin-left: 1%;
+  color: black;
+}

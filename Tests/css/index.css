@@ -1,0 +1,53 @@
+body {
+background: #e6e7e6;
+}
+
+.headlines {
+
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    padding: 20px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+
+    top: 5%;
+    left: 2%;
+    font-size: 25px
+
+}
+
+.info {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    /* text-indent: 50px; */
+    text-align: justify;
+    letter-spacing: 3px;
+}
+
+
+.checklist {
+    position: absolute;
+    top: 48%;
+    left: 5%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+
+}
+
+.aboutUs{
+    position: absolute;
+    top: 75%;
+    left: 2%;
+    text-align: justify;
+    letter-spacing: 3px;
+}
+
+.footer{
+    position: absolute;
+    top: 92%;
+    left: 1%;
+    text-align: justify;
+    letter-spacing: 3px;
+}
