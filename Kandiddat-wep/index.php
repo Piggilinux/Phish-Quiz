@@ -1,11 +1,9 @@
-<!-- include "tests/test.php";
-	include "tests/testTemplate.php"; -->
-
-
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
 
+<?php include_once 'db_conf/dbh.inc.php'; ?>
 <head>
 	<!-- <link rel="stylesheet" type="text/css" href="main.css" -->
     <link rel="stylesheet" type="text/css" href="Tests/css/index.css">
@@ -16,8 +14,11 @@
 
 </head>
 
-
 <body>
+<?php
+  $_SESSION['subject'] = md5(microtime().$_SERVER['REMOTE_ADDR']);
+  // echo $_SESSION['subject'];
+ ?>
 
     <div class="headlines">
         <h1>Bachelor Thesis<br/>Phishing Quiz</h1>
@@ -43,6 +44,7 @@
 </div>
 
 <div class="checklist">
+
     <form method="POST" action="Tests/php/actionHandler.php">
         <p>What program are you studying?</p>
         <input type="radio" value="IT-Security" name="study"> IT-Security<br/>
@@ -50,6 +52,8 @@
         <input type="radio" value="Non technical program" name="study"> Non technical program<br/><br/>
         <input type="submit" value="Go to test"></p>
     </form>
+
+
 
     <!-- <form id="form" method="get">
         <input type="radio" name="study" value="IT-Security"  onClick="index.js:radio_input('/Tests/testHandler.php')">
