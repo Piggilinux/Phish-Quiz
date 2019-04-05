@@ -13,16 +13,10 @@ function checkedBox() {
 
 // will display the next test and incease test_walker variable
 function getNextTest() {
-  var get_test = `test${test_walker}.html`;
-  var tests = document.getElementById("tests").innerHTML="<object type='text/html' data='test" + test_walker + ".html' width='100%' height='600' ></object>";
+  var get_test = `p2test${test_walker}.html`;
+  var tests = document.getElementById("tests").innerHTML="<object type='text/html' data='p2test" + test_walker + ".html' width='100%' height='600' ></object>";
   test_walker += 1;
 
-
-  if (test_walker == 4) {
-    // console.log("JAVAIFIFIF" + test_walker);
-     // document.body.innerHTML = '';
-     // document.getElementById('testButtons').innerHTML = "";
-  }
 }
 
 
