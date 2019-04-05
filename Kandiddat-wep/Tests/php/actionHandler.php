@@ -8,7 +8,9 @@
 
     if(isset($_POST['study']))
     {
-        // $sql = "INSERT INTO subjects (id, alignment) VALUES ('$session', '$field');";
+
+      
+
         $sql = "CALL insertSubject('$session', '$field');";
         mysqli_query($conn, $sql);
         header("Location: ../testn/testHandler.php");

@@ -52,23 +52,11 @@
         <input type="radio" value="Non technical program" name="study"> Non technical program<br/><br/>
         <input type="submit" value="Go to test"></p>
     </form>
-
-
-
-    <!-- <form id="form" method="get">
-        <input type="radio" name="study" value="IT-Security"  onClick="index.js:radio_input('/Tests/testHandler.php')">
-        <input type="radio" name="study" value="off"  onClick="JavaScript:radio_input('page2.php')">
-    </form> -->
-
 </div>
 
 
 <div class="list">
 
-    <!-- <a href="tests/testHandler.php"><b>Go to test</b></a><br/> -->
-
-    <!-- <a href="statistic.php"><b></a><br/>
-    <a href="Printer.php"><b>About us</b></a> -->
 </div>
 
 <div class="aboutUs">
@@ -81,6 +69,5 @@
 </div>
 
 </body>
-
 
 </html>
