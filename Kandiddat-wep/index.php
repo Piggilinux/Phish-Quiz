@@ -1,11 +1,9 @@
-<!-- include "tests/test.php";
-	include "tests/testTemplate.php"; -->
-
-
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html>
 
+<?php include_once 'db_conf/dbh.inc.php'; ?>
 <head>
 	<!-- <link rel="stylesheet" type="text/css" href="main.css" -->
     <link rel="stylesheet" type="text/css" href="Tests/css/index.css">
@@ -16,8 +14,11 @@
 
 </head>
 
-
 <body>
+<?php
+  $_SESSION['subject'] = md5(microtime().$_SERVER['REMOTE_ADDR']);
+  // echo $_SESSION['subject'];
+ ?>
 
     <div class="headlines">
         <h1>Bachelor Thesis<br/>Phishing Quiz</h1>
@@ -30,53 +31,53 @@
 
 <div class="info">
 
+    <br><br>  
 
 	<p>
-		First of all, Thank you for deciding to take your time to help us with <br/>
-		our bachelor thesis by doing our test. Before starting there are some <br/>
-		instructions that we recommend you do read.
-		<br/><br/>
-		Why are we doing this ...
-		<br/><br/>
-		Instructions..
+        <div class="info1">
+            First of all, thank you for deciding to take your time to help us out with <br/>
+            our bachelor thesis by doing this test.
+        </div>
+
+		<br/>
+        <div class="info2">
+            Phishing is when a person is trying to trick you in to giving up sensitive<br>
+            information such as password or credit card information by trying to act<br>
+            as someone you know. Can you spot the difference between real and fake?
+        </div>
 	</p>
 </div>
 
 <div class="checklist">
+
     <form method="POST" action="Tests/php/actionHandler.php">
         <p>What program are you studying?</p>
         <input type="radio" value="IT-Security" name="study"> IT-Security<br/>
         <input type="radio" value="Software engineering" name="study"> Software engineering<br/>
         <input type="radio" value="Non technical program" name="study"> Non technical program<br/><br/>
-        <input type="submit" value="Go to test"></p>
+        <input class="testButton" type="submit" value="Go to test"></p>
     </form>
-
-    <!-- <form id="form" method="get">
-        <input type="radio" name="study" value="IT-Security"  onClick="index.js:radio_input('/Tests/testHandler.php')">
-        <input type="radio" name="study" value="off"  onClick="JavaScript:radio_input('page2.php')">
-    </form> -->
-
 </div>
 
+<div class="time">
+    Time of test: 10-15 min
+</div>
+
+<div class="phishImg">
+    <img class="google_logo" src="Tests/picture/phish.png" alt="phish" width="400" height="300"><br>
+</div>
+
+<div class="semiBackgorund"></div>
 
 <div class="list">
 
-    <!-- <a href="tests/testHandler.php"><b>Go to test</b></a><br/> -->
-
-    <!-- <a href="statistic.php"><b></a><br/>
-    <a href="Printer.php"><b>About us</b></a> -->
 </div>
 
-<div class="aboutUs">
-	<br/><br/>
-	About us: Linus är bäst ingen protest!
-</div>
 
 <div class="footer">
     <p>Made by Sebastian Floderus & Linus Rosenholm</p>
 </div>
 
 </body>
-
 
 </html>

@@ -1,0 +1,63 @@
+
+body {
+background: #e6e6e6;
+}
+
+.headlines {
+/* text-align: center; */
+}
+
+.next {
+  position: absolute;
+  top: 1%;
+  left: 44%;
+  /* margin: 0  auto; */
+  border-radius: 40px;
+  background-color: white;
+  border: none;
+  color: #adadad;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  width: 175px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.finishButton {
+    position:absolute;
+    transition: .5s ease;
+    top: 50%;
+    left: 25%;
+    z-index: -1;
+}
+
+.nextPhase {
+    color: blue;
+}
+
+.next span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.next span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.next:hover span {
+  padding-right: 25px;
+}
+
+.next:hover span:after {
+  opacity: 1;
+  right: 0;
+}

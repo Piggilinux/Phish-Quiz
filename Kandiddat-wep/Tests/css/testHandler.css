@@ -25,6 +25,18 @@ background: #e6e6e6;
   margin: 5px;
 }
 
+.nextPhaseButton {
+    position:absolute;
+    transition: .5s ease;
+    top: 50%;
+    left: 25%;
+    z-index: -1;
+}
+
+.nextPhase {
+    color: blue;
+}
+
 .next span {
   cursor: pointer;
   display: inline-block;
