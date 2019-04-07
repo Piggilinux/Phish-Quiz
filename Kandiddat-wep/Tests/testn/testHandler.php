@@ -77,8 +77,11 @@ echo "<script src='../js/index.js'> </script>";
 			$_1 = $datas[0]['answ'];
 			$_2 = $datas[1]['answ'];
 			$_3 = $datas[2]['answ'];
+			$_4 = $datas[3]['answ'];
+			$_5 = $datas[4]['answ'];
 
-			$sql = "CALL insertAnswer('$sess', '$_1', '$_2', '$_3');";
+
+			$sql = "CALL insertAnswer('$sess', '$_1', '$_2', '$_3', '$_4', '$_5');";
 			mysqli_query($conn, $sql);
 			$remove = "DELETE FROM tmp_answ WHERE f_id = '$sess'";
 			mysqli_query($conn, $remove);

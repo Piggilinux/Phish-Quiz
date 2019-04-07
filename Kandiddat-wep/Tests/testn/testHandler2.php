@@ -18,7 +18,7 @@ var test_walker = 1;
 
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="../css/testHandler2.css">
+		<link rel="stylesheet" type="text/css" href="../css/testHandler.css">
 		<link rel="stylesheet" type="text/css" href="../css/buttons.css">
 		<meta charset="UTF-8">
 
@@ -27,7 +27,7 @@ var test_walker = 1;
 		</head>
 		<body onload="getNextTest()">
 
-		<?php
+			<?php
     // echo $_SESSION['subject'];
 		include_once '../../db_conf/dbh.inc.php';
 
@@ -41,7 +41,7 @@ var test_walker = 1;
 		    $answer = "Phish";
 		}
 
-		if(isset($_POST['submit2'])) {
+		if(isset($_POST['submit'])) {
 
 			$sess = $_SESSION['subject'];
 			// array_push($answer_arr, $answer);
@@ -86,7 +86,7 @@ var test_walker = 1;
 
 			 <form method="POST" target="dummyframe">
 				 <button id="next" class="next" onclick="callTest()" ><span>Next</span></button>
-				 <input type="hidden" name="submit2" >
+				 <input type="hidden" name="submit" >
 				 <div class="options">
 					 <div class="container">
 							 <ul class="ks-cboxtags">
@@ -140,12 +140,9 @@ var test_walker = 1;
 			}
 		</style>
 
-        <div class="finishButton">
-            <form  method="POST">
-    				<input type="submit" name="submitFinish" class="submitFinish" value="Finish test &raquo;">
-    		</form>
-        </div>
-
+		<form  method="POST">
+				<input type="submit" name="submitFinish" class="nextPhase" value="Finish test &raquo;">
+		</form>
 
 
 
