@@ -25,6 +25,7 @@ CREATE TABLE tmp_answ(
     FOREIGN KEY (f_id) REFERENCES subjects(id)
 );
 
+-- ************************ COPY (PART 2) *******************************************
 
 CREATE TABLE answers2(
     fk_id_p2 VARCHAR(255) NOT NULL,
@@ -35,53 +36,34 @@ CREATE TABLE answers2(
 );
 
 
+CREATE TABLE tmp_answ(
+    auto_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    f_id VARCHAR(255) NOT NULL,
+    answ VARCHAR(32) NOT NULL,
+    FOREIGN KEY (f_id) REFERENCES subjects(id)
+);
 -- **********************************************************************************
 
 
 SHOW TABLES;
 SELECT * FROM `subjects` WHERE 1;
 
-DROP PROCEDURE If EXISTS insertAnswer2;
+
+DROP PROCEDURE If EXISTS insertAnswer;
 DELIMITER //
-CREATE PROCEDURE insertAnswer2(sess VARCHAR(255), question1 VARCHAR(255), question2 VARCHAR(255), question3 VARCHAR(255))
+CREATE PROCEDURE insertAnswer(sess VARCHAR(255), qNr VARCHAR(255), answ VARCHAR(255))
   BEGIN
 
-    IF sess NOT IN (SELECT answers2.fk_id_p2 FROM answers2)
+    IF sess IN (SELECT answers.fk_id FROM answers)
       THEN
-        INSERT INTO answers2 (answers2.fk_id_p2, answers2.q1_p2, answers2.q2_p2, answers2.q3_p2) VALUES (sess, question1, question2, question3);
+       UPDATE answers SET qNr = answ WHERE answers.fk_id = sess;
+    ELSE
+      INSERT INTO answers (fk_id, qNr) VALUES (sess, answ);
       END IF;
   END // DELIMITER ;
 
---
--- DROP PROCEDURE If EXISTS insertAnswer;
--- DELIMITER //
--- CREATE PROCEDURE insertAnswer(sess VARCHAR(255), qNr VARCHAR(255), answ VARCHAR(255))
---   BEGIN
---
---     IF sess IN (SELECT answers.fk_id FROM answers)
---       THEN
---        UPDATE answers SET qNr = answ WHERE answers.fk_id = sess;
---     ELSE
---       INSERT INTO answers (fk_id, qNr) VALUES (sess, answ);
---       END IF;
---   END // DELIMITER ;
---
--- CALL insertAnswer($sess, $walker, $answer);
---
--- -- ******************************  COPY   ***************************************
--- DROP PROCEDURE If EXISTS insertAnswer2;
--- DELIMITER //
--- CREATE PROCEDURE insertAnswer2(sess VARCHAR(255), qNr VARCHAR(255), answ VARCHAR(255))
---   BEGIN
---
---     IF sess IN (SELECT answers2.fk_id FROM answers)
---       THEN
---        UPDATE answers2 SET qNr = answ WHERE answers2.fk_id = sess;
---     ELSE
---       INSERT INTO answers2 (fk_id, qNr) VALUES (sess, answ);
---       END IF;
---   END // DELIMITER ;
--- -- ******************************  COPY   ***************************************
+CALL insertAnswer($sess, $walker, $answer);
+
 
 
 DROP PROCEDURE IF EXISTS insertSubject;

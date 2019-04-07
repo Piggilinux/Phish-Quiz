@@ -18,7 +18,7 @@ var test_walker = 1;
 
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="../css/testHandler.css">
+		<link rel="stylesheet" type="text/css" href="../css/testHandler2.css">
 		<link rel="stylesheet" type="text/css" href="../css/buttons.css">
 		<meta charset="UTF-8">
 
@@ -28,7 +28,7 @@ var test_walker = 1;
 		<body onload="getNextTest()">
 
 		<?php
-    echo $_SESSION['subject'];
+    // echo $_SESSION['subject'];
 		include_once '../../db_conf/dbh.inc.php';
 
 		$fk_id = $_SESSION['subject'];
@@ -76,7 +76,7 @@ var test_walker = 1;
   			$remove = "DELETE FROM tmp_answ WHERE f_id = '$sess'";
   			mysqli_query($conn, $remove);
 
-        //header("Location: ../done/thankyou.php");
+        header("Location: ../done/thankyou.php");
 		  }
 
 		 ?>
@@ -140,9 +140,12 @@ var test_walker = 1;
 			}
 		</style>
 
-		<form  method="POST">
-				<input type="submit" name="submitFinish" class="submitFinish" value="Finish test &raquo;">
-		</form>
+        <div class="finishButton">
+            <form  method="POST">
+    				<input type="submit" name="submitFinish" class="submitFinish" value="Finish test &raquo;">
+    		</form>
+        </div>
+
 
 
 

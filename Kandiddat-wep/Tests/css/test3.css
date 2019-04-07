@@ -2,8 +2,9 @@
 
 body {
   background-color: #5f91ec;
+  padding: 5px;
+  border-radius: 10px;
 }
-
 
 
 /* .options {
@@ -15,7 +16,7 @@ body {
   margin: auto;
   margin-top: -3%;
   width: 1000px;
-  height: 200px;
+  height: 440px;
   background-color: white;
   padding: 5px;
   border-radius: 10px;
@@ -32,7 +33,7 @@ body {
   text-align: center;
   /* text-align: justify; */
 
-  background: green;
+  background: #cc98e6;
   float: left;
 }
 
@@ -52,20 +53,42 @@ body {
   margin-left: 80%;
 }
 
+.image_netflix{
+    padding-left: 400px;
+}
+
 /* far goras en for varje mejl: .mailContent1, mailContent2 osv.. */
-.mailContent {
+.mailContent2 {
   /* padding: 100px; */
-  color: black;
-  float:left;
-  margin-left: 1.5%;
-  display: block;
+    color: black;
+    float:left;
+    margin-left: 1.9%;
+  /* margin-top: 5.5%; */
+    display: block;
 
-  position: absolute absolute;
-  width: 970px;
-  height: 100px;
-  background-color: #f2f2f2;
+    padding-left: 250px;
+
+    position: absolute absolute;
+    width: 950px;
+    height: 310px;
+    background-color: #f2f2f2;
   /* border-radius: 1%; */
+}
 
+.borderUnderLink {
+    border-bottom: 1px solid gray;
+    padding-top: 10px;
+    width: 330px;
+
+}
+
+.boxClick {
+    background-color: #1E90FF;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .ref {
@@ -87,7 +110,7 @@ body {
 }
 
 .dropbtn {
-  display: inline-block;
+    display: inline-block;
     border: 1px solid gray;
     border-radius: 4px;
     padding: 7px 7px;
@@ -120,6 +143,8 @@ body {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0);
   z-index: 1;
+  border-style: solid;
+  border-width: thin;
 }
 
 .dropdown-content a {
