@@ -13,6 +13,7 @@ function checkedBox() {
 
 // will display the next test and incease test_walker variable
 function getNextTest() {
+  console.log(test_walker)
   var get_test = `test${test_walker}.html`;
   var tests = document.getElementById("tests").innerHTML="<object type='text/html' data='test" + test_walker + ".html' width='100%' height='600' ></object>";
   test_walker += 1;

@@ -76,7 +76,7 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 .options {
 position: absolute;
-top: 5%;
+top: 10%;
 left: 43%;
 }
 

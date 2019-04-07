@@ -1,0 +1,129 @@
+
+
+body {
+  background-color: #e6e7e6;
+}
+
+.semiBackgorund {
+    background-color: #FFFAF0;
+    width: 1490px;
+    height: 550px;
+    position: absolute;
+    top: 90px;
+    left: 15px;
+    z-index: -1;
+}
+
+.identifyPhish {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 30px;
+    border-bottom: 1.5px solid #FFFAF0;
+}
+
+.checklist {
+    position: absolute;
+    top: 575px;
+    left: 50px;
+}
+
+.readyButton {
+    background-color: #B22222;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.text1 {
+    /* text-indent: 50px; */
+    color: black;
+    text-align: justify;
+    letter-spacing: 3px;
+    z-index: 1;
+
+    padding-left: 20px;
+}
+
+.hint1 {
+    color: #B22222;
+    text-align: justify;
+    letter-spacing: 3px;
+    z-index: 1;
+
+    padding-left: 20px;
+}
+
+.hint1Text {
+    color: black;
+    padding-left: 20px;
+}
+
+.hint2 {
+    color: #B22222;
+    text-align: justify;
+    letter-spacing: 3px;
+    z-index: 1;
+
+    padding-left: 20px;
+}
+
+.hint2Text {
+    color: black;
+    padding-left: 20px;
+}
+
+.hint3 {
+    color: #B22222;
+    text-align: justify;
+    letter-spacing: 3px;
+    z-index: 1;
+
+    padding-left: 20px;
+}
+
+.hint3Text {
+    color: black;
+    padding-left: 20px;
+}
+
+.hint4 {
+    color: #B22222;
+    text-align: justify;
+    letter-spacing: 3px;
+    z-index: 1;
+
+    padding-left: 20px;
+}
+
+.hint4Text {
+    color: black;
+    padding-left: 20px;
+}
+
+.try {
+    color: #B22222;
+    text-align: justify;
+    letter-spacing: 3px;
+    z-index: 1;
+
+    padding-left: 40px;
+}
+
+.netflixLink {
+    padding-left: 60px;
+}
+
+.educationPic {
+    padding-left: 500px;
+    z-index: 1;
+}
+
+.pic {
+    position: absolute;
+    top: 110px;
+    left: 700px;
+    border-style: solid;
+    border-radius: 10px;
+}
