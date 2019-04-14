@@ -24,6 +24,7 @@ CREATE TABLE tmp_answ(
     auto_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     f_id VARCHAR(255) NOT NULL,
     answ VARCHAR(32) NOT NULL,
+    DateTime TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (f_id) REFERENCES subjects(id)
 );
 
@@ -40,7 +41,7 @@ CREATE TABLE answers2(
 
 
 
-  DROP PROCEDURE If EXISTS insertAnswer;
+DROP PROCEDURE If EXISTS insertAnswer;
 DELIMITER //
 CREATE PROCEDURE insertAnswer(sess VARCHAR(255), question1 VARCHAR(255), question2 VARCHAR(255), question3 VARCHAR(255), question4 VARCHAR(255), question5 VARCHAR(255))
   BEGIN

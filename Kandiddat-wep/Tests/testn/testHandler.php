@@ -64,7 +64,7 @@ echo "<script src='../js/index.js'> </script>";
 		if(isset($_POST['submitDone'])) {
 
 			$sess = $_SESSION['subject'];
-			$sql = "SELECT * FROM tmp_answ WHERE f_id = '$sess';";
+			$sql = "SELECT * FROM tmp_answ WHERE f_id = '$sess' ORDER BY DateTime ASC;";
 			$result = mysqli_query($conn, $sql);
 			$datas = array();
 
@@ -109,15 +109,7 @@ echo "<script src='../js/index.js'> </script>";
 		 ?>
 
 		 <div class="testButtons">
-			 	<!-- <script type="text/javascript">checkedBox();</script>
 
-				<div id="prog" class="headlines">
-				<br><br><br>
-				</div>
-
-				<div id="test" class="testholder" >
-					<div id="tests" ></div>
-				</div> -->
 
 			 <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
 			 <!-- action="../php/answer.php" -->
@@ -146,16 +138,6 @@ echo "<script src='../js/index.js'> </script>";
 			<div id="tests" ></div>
 		</div>
 
-		<!-- <script type="text/javascript">
-			console.log("OUTSIDE" + test_walker);
-		if (test_walker == 4) {
-			console.log("IFIFIF" + test_walker);
-
-			 document.body.innerHTML = '';
-
-			 // document.getElementById('testButtons').innerHTML = "";
-
-		} -->
 
 		</script>
 

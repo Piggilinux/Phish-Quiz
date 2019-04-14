@@ -1,0 +1,54 @@
+body {
+background: #e6e7e6;
+}
+
+.semiBackgorund {
+    background-color: #FFFAF0;
+    width: 1490px;
+    height: 4500px;
+    position: absolute;
+    top: 300px;
+    left: 15px;
+    z-index: -1;
+}
+
+.headlines {
+
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    padding: 15px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    background-color: #5f91ec;
+    width: 1400px;
+    height: 130px;
+    border-style: outset;
+    top: 1%;
+    left: 5%;
+    font-size: 25px
+
+}
+
+.result {
+
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+    padding: 0% 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+
+
+
+}
+
+.phishImg1-1 {
+  position: absolute;
+  top: 300px;
+  left: 150px;
+}
+
+.phishImg1-2 {
+  position: absolute;
+  top: 300px;
+  left: 825px;
+}

@@ -1,7 +1,7 @@
 .container {
     max-width: 640px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 13px;
+    font-size: 18px; /* var 13 */
 }
 
 ul.ks-cboxtags {
@@ -16,7 +16,7 @@ ul.ks-cboxtags li label{
     background-color: rgba(255, 255, 255, .9);
     border: 2px solid rgba(139, 139, 139, .3);
     color: #adadad;
-    border-radius: 25px;
+    border-radius: 35px;
     white-space: nowrap;
     margin: 3px 0px;
     -webkit-touch-callout: none;
@@ -43,8 +43,8 @@ ul.ks-cboxtags li label::before {
     content: "\f007";
     font-family: 'Font Awesome\ 5 Free';
     font-weight: 900;
-    font-size: 12px;
-    padding: 2px 6px 2px 2px;
+    font-size: 16px; /* var 12 */
+    padding: 10px 30px 10px 10px; /* var 2, 6, 2, 2 */
     content: "\f067";
     transition: transform .3s ease-in-out;
 }
@@ -62,6 +62,7 @@ ul.ks-cboxtags li input[type="checkbox"]:checked + label {
     transition: all .2s;
 }
 
+
 ul.ks-cboxtags li input[type="checkbox"] {
   display: absolute;
 }
@@ -76,8 +77,8 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 
 .options {
 position: absolute;
-top: 5%;
-left: 43%;
+top: 8%;
+left: 40%;
 }
 
 .legimate {
