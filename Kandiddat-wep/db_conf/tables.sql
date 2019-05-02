@@ -5,7 +5,8 @@ DROP TABLE IF EXISTS subjects;
 CREATE TABLE subjects(
     id VARCHAR(255) NOT NULL PRIMARY KEY,
     alignment VARCHAR(32) NOT NULL,
-    test_type VARCHAR(32) NOT NULL
+    test_type VARCHAR(32) NOT NULL,
+    DateTime TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 
@@ -16,6 +17,8 @@ CREATE TABLE answers(
     q3 VARCHAR(32),
     q4 VARCHAR(32),
     q5 VARCHAR(32),
+    q6 VARCHAR(32),
+    DateTime TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (fk_id) REFERENCES subjects(id)
 );
 
@@ -34,6 +37,10 @@ CREATE TABLE answers2(
     q1_p2 VARCHAR(32),
     q2_p2 VARCHAR(32),
     q3_p2 VARCHAR(32),
+    q4_p2 VARCHAR(32),
+    q5_p2 VARCHAR(32),
+    q6_p2 VARCHAR(32),
+    DateTime TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (fk_id_p2) REFERENCES subjects(id)
 );
 
@@ -43,24 +50,24 @@ CREATE TABLE answers2(
 
 DROP PROCEDURE If EXISTS insertAnswer;
 DELIMITER //
-CREATE PROCEDURE insertAnswer(sess VARCHAR(255), question1 VARCHAR(255), question2 VARCHAR(255), question3 VARCHAR(255), question4 VARCHAR(255), question5 VARCHAR(255))
+CREATE PROCEDURE insertAnswer(sess VARCHAR(255), question1 VARCHAR(255), question2 VARCHAR(255), question3 VARCHAR(255), question4 VARCHAR(255), question5 VARCHAR(255), question6 VARCHAR(255))
   BEGIN
 
     IF sess NOT IN (SELECT answers.fk_id FROM answers)
       THEN
-        INSERT INTO answers (answers.fk_id, answers.q1, answers.q2, answers.q3, answers.q4, answers.q5) VALUES (sess, question1, question2, question3, question4, question5);
+        INSERT INTO answers (answers.fk_id, answers.q1, answers.q2, answers.q3, answers.q4, answers.q5, answers.q6) VALUES (sess, question1, question2, question3, question4, question5, question6);
       END IF;
   END // DELIMITER ;
 
 
 DROP PROCEDURE If EXISTS insertAnswer2;
 DELIMITER //
-CREATE PROCEDURE insertAnswer2(sess VARCHAR(255), question1 VARCHAR(255), question2 VARCHAR(255), question3 VARCHAR(255))
+CREATE PROCEDURE insertAnswer2(sess VARCHAR(255), question1 VARCHAR(255), question2 VARCHAR(255), question3 VARCHAR(255), question4 VARCHAR(255), question5 VARCHAR(255), question6 VARCHAR(255))
   BEGIN
 
     IF sess NOT IN (SELECT answers2.fk_id_p2 FROM answers2)
       THEN
-        INSERT INTO answers2 (answers2.fk_id_p2, answers2.q1_p2, answers2.q2_p2, answers2.q3_p2) VALUES (sess, question1, question2, question3);
+        INSERT INTO answers2 (answers2.fk_id_p2, answers2.q1_p2, answers2.q2_p2, answers2.q3_p2, answers2.q4_p2, answers2.q5_p2, answers2.q6_p2) VALUES (sess, question1, question2, question3, question4, question5, question6);
       END IF;
   END // DELIMITER ;
 

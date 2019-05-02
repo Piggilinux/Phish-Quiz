@@ -25,13 +25,14 @@ background: #e6e6e6;
   margin: 5px;
 }
 
-.finishButton {
+.nextPhaseButton {
     position:absolute;
     transition: .5s ease;
-    top: 50%;
-    left: 25%;
+    top: 30%;
+    left: 5%;
     z-index: -1;
 }
+
 
 .nextPhase {
     color: blue;

@@ -4,8 +4,8 @@ body {
   background-color: #5f91ec;
   padding: 5px;
   border-radius: 10px;
+  /* position: absolute; */
 }
-
 
 /* .options {
   text-align: center;

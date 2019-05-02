@@ -5,9 +5,9 @@ background: #e6e7e6;
 .semiBackgorund {
     background-color: #FFFAF0;
     width: 1490px;
-    height: 4500px;
+    height: 1600px;
     position: absolute;
-    top: 300px;
+    top: 400px;
     left: 15px;
     z-index: -1;
 }
@@ -37,18 +37,90 @@ background: #e6e7e6;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
 
-
-
 }
+
+/* .footer{
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    text-align: justify;
+    letter-spacing: 3px;
+    z-index: 10;
+} */
 
 .phishImg1-1 {
   position: absolute;
-  top: 300px;
+  top: 400px;
   left: 150px;
 }
 
 .phishImg1-2 {
   position: absolute;
-  top: 300px;
+  top: 400px;
+  left: 825px;
+}
+
+.phishImg1-3 {
+  position: absolute;
+  top: 650px;
+  left: 150px;
+}
+
+.phishImg1-4 {
+  position: absolute;
+  top: 650px;
+  left: 825px;
+}
+
+.phishImg1-5 {
+  position: absolute;
+  top: 900px;
+  left: 150px;
+}
+
+.phishImg1-6 {
+  position: absolute;
+  top: 900px;
+  left: 825px;
+}
+
+
+
+
+
+
+.phishImg2-1 {
+  position: absolute;
+  top: 1150px;
+  left: 150px;
+}
+
+.phishImg2-2 {
+  position: absolute;
+  top: 1150px;
+  left: 825px;
+}
+
+.phishImg2-3 {
+  position: absolute;
+  top: 1400px;
+  left: 150px;
+}
+
+.phishImg2-4 {
+  position: absolute;
+  top: 1400px;
+  left: 825px;
+}
+
+.phishImg2-5 {
+  position: absolute;
+  top: 1650px;
+  left: 150px;
+}
+
+.phishImg2-6 {
+  position: absolute;
+  top: 1650px;
   left: 825px;
 }

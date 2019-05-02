@@ -1,9 +1,17 @@
 <?php
 
+  // $dbServername = "localhost";
+  // $dbUsername = "root";
+  // $dbPassword = "";
+  // $dbName = "kandidat";
+  //
+  // $conn =  mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
   $dbServername = "localhost";
-  $dbUsername = "root";
-  $dbPassword = "";
+  $dbUsername = "linastian";
+  $dbPassword = "Sebinus123!";
   $dbName = "kandidat";
 
   $conn =  mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
+
 ?>

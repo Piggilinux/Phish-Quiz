@@ -1,7 +1,7 @@
 .container {
-    max-width: 640px;
+    /* max-width: 640px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px; /* var 13 */
+    font-size: 18px; */
 }
 
 ul.ks-cboxtags {
@@ -75,11 +75,11 @@ ul.ks-cboxtags li input[type="checkbox"]:focus + label {
 }
 
 
-.options {
+/* .options {
 position: absolute;
 top: 8%;
 left: 40%;
-}
+} */
 
 .legimate {
   background-color: #4CAF50;

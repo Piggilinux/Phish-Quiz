@@ -6,7 +6,8 @@
   $field = $_POST['study'];
   $session = $_SESSION['subject'];
 
-    if(isset($_POST['study']))
+    if(isset($_POST['study']) && $_POST['study'] == 'Nurse' || isset($_POST['study']) && $_POST['study'] == 'IT-Security' ||
+    isset($_POST['study']) && $_POST['study'] == 'Other')
     {
 
       
